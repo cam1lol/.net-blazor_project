@@ -1,6 +1,6 @@
-# 🎯 TaskManager Full-Stack Application
+# 🎯 TaskManager – Aplicación Full-Stack
 
-![TaskManager Logo](https://via.placeholder.com/200x60?text=TaskManager)
+![TaskManager Logo](https://via.placeholder.com/250x60?text=TaskManager)
 
 [![.NET](https://img.shields.io/badge/.NET-10-blue)](https://dotnet.microsoft.com/)
 [![Blazor](https://img.shields.io/badge/Blazor-WebAssembly-orange)](https://learn.microsoft.com/en-us/aspnet/core/blazor/)
@@ -9,13 +9,17 @@
 
 ---
 
-## 📌 Descripción del Proyecto
-**TaskManager** es una aplicación web **full-stack** creada con **Blazor WebAssembly** y **ASP.NET Core 10**, enfocada en la gestión de tareas por usuario.  
+## 📌 Sobre el Proyecto
 
+**TaskManager** es una aplicación web full-stack desarrollada con **Blazor WebAssembly** y **ASP.NET Core 10** que permite a los usuarios gestionar sus tareas de manera sencilla y eficiente.  
+
+**Funcionalidades principales:**
 - Crear, editar y eliminar tareas.  
-- Filtrar tareas por estado: Pendiente, En progreso, Completada.  
-- Administrar usuarios y sus tareas.  
-- UI responsiva con **Bootstrap 5** y animaciones CSS en cards.
+- Filtrar tareas por estado: Pendiente, En progreso o Completada.  
+- Administrar usuarios y asociarles sus tareas.  
+- Interfaz moderna, interactiva y responsiva con **Bootstrap 5** y animaciones CSS.  
+
+> Esta aplicación fue diseñada como un ejercicio práctico para demostrar buenas prácticas de desarrollo full-stack y modularidad.
 
 ---
 
@@ -34,28 +38,33 @@ TaskManager
 └─ TaskManager.Api          ← API RESTful
    ├─ Controllers           ← Endpoints Users & Tasks
    └─ Data                  ← DbContext y EF Core
-Diagrama conceptual interactivo:
+
+🔗 Diagrama conceptual
 
 flowchart LR
-    A[Frontend: Blazor Client] <--HTTP/JSON--> B[Backend: ASP.NET Core API]
-    B <--EF Core--> C[Base de datos SQLite]
+    A[Frontend: Blazor WebAssembly] <--HTTP/JSON--> B[Backend: ASP.NET Core API]
+    B <--EF Core--> C[Base de datos MySql
 
-🛠 Tecnologías Usadas
+🛠 Tecnologías Utilizadas
+
 Área	Tecnología
 Backend	ASP.NET Core 10, C#
 Frontend	Blazor WebAssembly, Razor Components
-Base de Datos	SQLite
-UI/UX	Bootstrap 5, Animaciones CSS
+Base de Datos	MySql
+UI / UX	Bootstrap 5, Animaciones CSS
 Servicios	Entity Framework Core
 Control de Versiones	Git & GitHub
-🚀 Cómo clonar y ejecutar el proyecto
+
+🚀 Guía de Instalación y Ejecución
 1️⃣ Clonar el repositorio
 git clone https://github.com/tuusuario/TaskManager.git
 cd TaskManager
 
 2️⃣ Configurar la base de datos
 
-La API utiliza SQLite. EF Core aplicará migraciones automáticamente al ejecutar la API por primera vez y creará TaskManager.db en TaskManager.Api/Data.
+La API utiliza SQLite.
+
+EF Core aplicará las migraciones automáticamente al ejecutar la API por primera vez, creando TaskManager.db en TaskManager.Api/Data.
 
 3️⃣ Restaurar dependencias y compilar
 
@@ -67,9 +76,13 @@ dotnet build
 dotnet run
 
 
-URL por defecto: https://localhost:5001 / http://localhost:5000
+URLs por defecto:
 
-Client:
+https://localhost:5001
+
+http://localhost:5000
+
+Frontend:
 
 cd TaskManager.Client
 dotnet restore
@@ -79,7 +92,7 @@ dotnet run
 
 La aplicación Blazor WebAssembly se servirá en http://localhost:5032.
 
-4️⃣ Configurar la conexión del frontend con la API
+4️⃣ Conectar Frontend con API
 
 En Program.cs del cliente:
 
@@ -102,42 +115,42 @@ POST	/api/tasks	Crear una tarea
 PUT	/api/tasks/{id}	Actualizar una tarea
 DELETE	/api/tasks/{id}	Eliminar una tarea
 
-Puedes usar Postman, Swagger (/swagger) o Insomnia para probar los endpoints.
+Puedes usar Postman, Swagger (/swagger) o Insomnia para probar los endpoints de forma interactiva.
 
 🎨 Interfaz de Usuario
 
-Cards animadas para Users y Tasks.
+Cards animadas para mostrar Users y Tasks.
 
-Formulario de creación y edición con validación.
+Formularios con validación de campos obligatorios.
 
 Dashboard interactivo y responsivo.
 
-Filtro de tareas por estado y búsqueda dinámica.
+Filtros y búsqueda dinámica de tareas.
 
-📄 Decisiones técnicas
+📄 Decisiones Técnicas
 
-Blazor WebAssembly para UI interactiva.
+Blazor WebAssembly para UI interactiva y modular.
 
-EF Core para persistencia ligera.
+Entity Framework Core para persistencia ligera y rápida.
 
-Modelos compartidos (TaskManager.Shared) para evitar duplicación de código.
+Shared Models (TaskManager.Shared) para evitar duplicación de código.
 
-Componentes reutilizables (UserCard, TaskCard) para mantener modularidad.
+Componentes reutilizables (UserCard, TaskCard) para mantener el proyecto modular y limpio.
 
-Validación de datos y separación de responsabilidades (SRP).
+Validación de datos y separación de responsabilidades siguiendo SRP.
 
-💡 Posibles mejoras
+💡 Posibles Mejoras
 
-Autenticación y roles de usuario.
+Implementar autenticación y roles de usuario.
 
-Dashboard con estadísticas y gráficos.
+Dashboard con estadísticas y gráficos interactivos.
 
 Filtros avanzados y búsqueda en tiempo real.
 
-Deploy a Azure, Docker o GitHub Pages.
+Despliegue a Azure, Docker o GitHub Pages.
 
 📌 Contacto
 
 Correo: kmilo0230@gmail.com
 
-Portafolio: https://cv-cami.vercel.app/
+Portafolio: cv-cami.vercel.app
