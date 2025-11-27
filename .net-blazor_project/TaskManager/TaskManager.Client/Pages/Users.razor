@@ -3,14 +3,26 @@
 @using UserModel = TaskManager.Shared.Models.User
 @inject UserService UserService
 
-<h3>Users</h3>
+<h3 class="mb-4">Usuarios</h3>
 
-@if (users != null && users.Any())
+@if (users == null)
 {
-    @foreach(var user in users)
-    {
-        <UserCard User="user" />
-    }
+    <p>Cargando usuarios...</p>
+}
+else if (!users.Any())
+{
+    <p>No hay usuarios registrados.</p>
+}
+else
+{
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach (var user in users)
+        {
+            <div class="col">
+                <UserCard User="user" />
+            </div>
+        }
+    </div>
 }
 
 @code {

@@ -44,6 +44,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUYXNrbGlzdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/kmilo/Escritorio/.net_project/.net-blazor_project/TaskManager/TaskManager.Client/Pages/Dashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/kmilo/Escritorio/.net_project/.net-blazor_project/TaskManager/TaskManager.Client/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -54,10 +58,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/kmilo/Escritorio/.net_project/.net-blazor_project/TaskManager/TaskManager.Client/Pages/Tasks.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFza3MucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/kmilo/Escritorio/.net_project/.net-blazor_project/TaskManager/TaskManager.Client/Pages/UserCard.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckNhcmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/kmilo/Escritorio/.net_project/.net-blazor_project/TaskManager/TaskManager.Client/Pages/UserList.razor]
@@ -79,3 +79,7 @@ build_metadata.AdditionalFiles.CssScope = b-v26lfgnetb
 [D:/kmilo/Escritorio/.net_project/.net-blazor_project/TaskManager/TaskManager.Client/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-7a9l0vft7e
+
+[D:/kmilo/Escritorio/.net_project/.net-blazor_project/TaskManager/TaskManager.Client/Pages/UserCard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckNhcmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-09izo4ldu4
