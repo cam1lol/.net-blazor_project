@@ -56,6 +56,7 @@ Servicios	Entity Framework Core
 Control de Versiones	Git & GitHub
 
 🚀 Guía de Instalación y Ejecución
+
 1️⃣ Clonar el repositorio
 git clone https://github.com/tuusuario/TaskManager.git
 cd TaskManager
@@ -89,6 +90,49 @@ dotnet restore
 dotnet build
 dotnet run
 
+⚙ Configuración de Puertos y Base de Datos
+🔹 Configuración de Puertos
+
+La API se ejecuta por defecto en:
+
+https://localhost:5001 (HTTPS)
+
+http://localhost:5000 (HTTP)
+
+El frontend (Blazor WebAssembly) se sirve por defecto en:
+
+http://localhost:5032
+
+Estos valores se pueden modificar en Properties/launchSettings.json de cada proyecto si se necesita otro puerto.
+
+🔹 Configuración de la Conexión a la Base de Datos
+
+La API utiliza SQLite como base de datos ligera.
+
+El archivo TaskManager.db se genera automáticamente en TaskManager.Api/Data la primera vez que ejecutas la API.
+
+La conexión a SQLite está definida en TaskManager.Api/Data/AppDbContext.cs:
+
+public class AppDbContext : DbContext
+{
+    public AppDbContext(DbContextOptions<AppDbContext> options)
+        : base(options) { }
+
+    public DbSet<User> Users { get; set; }
+    public DbSet<TaskItem> Tasks { get; set; }
+}
+
+
+La cadena de conexión se encuentra en appsettings.json:
+
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Data Source=Data/TaskManager.db"
+  }
+}
+
+
+EF Core aplicará las migraciones automáticamente al ejecutar la API y creará la base de datos si no existe.
 
 La aplicación Blazor WebAssembly se servirá en http://localhost:5032.
 
@@ -138,6 +182,14 @@ Shared Models (TaskManager.Shared) para evitar duplicación de código.
 Componentes reutilizables (UserCard, TaskCard) para mantener el proyecto modular y limpio.
 
 Validación de datos y separación de responsabilidades siguiendo SRP.
+
+-- Colecciones en Postman para probar Endpoinds --
+
+Controlador Tareas
+https://.postman.co/workspace/My-Workspace~38a4c6e3-8f8a-4aff-8e69-8779202ecd32/collection/36399364-b855c4d5-1ba4-462e-84fd-027fce018ea9?action=share&creator=36399364
+
+Controlador Usuarios
+https://.postman.co/workspace/My-Workspace~38a4c6e3-8f8a-4aff-8e69-8779202ecd32/collection/36399364-b855c4d5-1ba4-462e-84fd-027fce018ea9?action=share&creator=36399364
 
 💡 Posibles Mejoras
 
