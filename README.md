@@ -4,7 +4,7 @@
 
 [![.NET](https://img.shields.io/badge/.NET-10-blue)](https://dotnet.microsoft.com/)
 [![Blazor](https://img.shields.io/badge/Blazor-WebAssembly-orange)](https://learn.microsoft.com/en-us/aspnet/core/blazor/)
-[![SQLite](https://img.shields.io/badge/SQLite-3.41.2-lightgrey)](https://www.sqlite.org/)
+[![SQLite](https://img.shields.io/badge/MySql-8.4.2-lightgrey)](https://www.sqlite.org/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 ---
