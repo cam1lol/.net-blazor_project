@@ -17,8 +17,6 @@
 - Administrar usuarios y sus tareas.  
 - UI responsiva con **Bootstrap 5** y animaciones CSS en cards.
 
-![Demo GIF](https://media.giphy.com/media/l4pTfx2qLszoacZRS/giphy.gif)
-
 ---
 
 ## 🏗 Arquitectura del Proyecto
