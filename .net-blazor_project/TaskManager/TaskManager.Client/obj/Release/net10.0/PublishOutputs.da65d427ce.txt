@@ -1,0 +1,4 @@
+D:\kmilo\Escritorio\.net_project\.net-blazor_project\TaskManager\TaskManager.Client\bin\Release\net10.0\publish\wwwroot\index.html
+D:\kmilo\Escritorio\.net_project\.net-blazor_project\TaskManager\TaskManager.Client\bin\Release\net10.0\publish\TaskManager.Client.runtimeconfig.json
+D:\kmilo\Escritorio\.net_project\.net-blazor_project\TaskManager\TaskManager.Client\bin\Release\net10.0\publish\dotnet.js
+D:\kmilo\Escritorio\.net_project\.net-blazor_project\TaskManager\TaskManager.Client\bin\Release\net10.0\publish\web.config

@@ -1,0 +1,12 @@
+D:\kmilo\Escritorio\.net_project\.net-blazor_project\TaskManager\TaskManager.Shared\bin\Debug\net10.0\TaskManager.Shared.deps.json
+D:\kmilo\Escritorio\.net_project\.net-blazor_project\TaskManager\TaskManager.Shared\bin\Debug\net10.0\TaskManager.Shared.dll
+D:\kmilo\Escritorio\.net_project\.net-blazor_project\TaskManager\TaskManager.Shared\bin\Debug\net10.0\TaskManager.Shared.pdb
+D:\kmilo\Escritorio\.net_project\.net-blazor_project\TaskManager\TaskManager.Shared\obj\Debug\net10.0\TaskManager.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\kmilo\Escritorio\.net_project\.net-blazor_project\TaskManager\TaskManager.Shared\obj\Debug\net10.0\TaskManager.Shared.AssemblyInfoInputs.cache
+D:\kmilo\Escritorio\.net_project\.net-blazor_project\TaskManager\TaskManager.Shared\obj\Debug\net10.0\TaskManager.Shared.AssemblyInfo.cs
+D:\kmilo\Escritorio\.net_project\.net-blazor_project\TaskManager\TaskManager.Shared\obj\Debug\net10.0\TaskManager.Shared.csproj.CoreCompileInputs.cache
+D:\kmilo\Escritorio\.net_project\.net-blazor_project\TaskManager\TaskManager.Shared\obj\Debug\net10.0\TaskManager.Shared.sourcelink.json
+D:\kmilo\Escritorio\.net_project\.net-blazor_project\TaskManager\TaskManager.Shared\obj\Debug\net10.0\TaskManager.Shared.dll
+D:\kmilo\Escritorio\.net_project\.net-blazor_project\TaskManager\TaskManager.Shared\obj\Debug\net10.0\refint\TaskManager.Shared.dll
+D:\kmilo\Escritorio\.net_project\.net-blazor_project\TaskManager\TaskManager.Shared\obj\Debug\net10.0\TaskManager.Shared.pdb
+D:\kmilo\Escritorio\.net_project\.net-blazor_project\TaskManager\TaskManager.Shared\obj\Debug\net10.0\ref\TaskManager.Shared.dll

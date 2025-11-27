@@ -1,0 +1,3 @@
+D:\kmilo\Escritorio\.net_project\.net-blazor_project\TaskManager\TaskManager.Shared\bin\Release\net10.0\publish\TaskManager.Shared.dll
+D:\kmilo\Escritorio\.net_project\.net-blazor_project\TaskManager\TaskManager.Shared\bin\Release\net10.0\publish\TaskManager.Shared.deps.json
+D:\kmilo\Escritorio\.net_project\.net-blazor_project\TaskManager\TaskManager.Shared\bin\Release\net10.0\publish\TaskManager.Shared.pdb
