@@ -1,13 +1,13 @@
-using TaskManager.Api.Models;
+using TaskManager.Shared.Models;
 
 namespace TaskManager.Api.Services.Interfaces
 {
     public interface ITaskService
     {
-        Task<IEnumerable<TaskItem>> GetAllAsync();
-        Task<TaskItem> GetByIdAsync(int id);
-        Task<TaskItem> CreateAsync(TaskItem task);
-        Task<TaskItem> UpdateAsync(int id, TaskItem task);
+        Task<IEnumerable<UserTask>> GetAllAsync();
+        Task<UserTask> GetByIdAsync(int id);
+        Task<UserTask> CreateAsync(UserTask task);
+        Task<UserTask> UpdateAsync(int id, UserTask task);
         Task<bool> DeleteAsync(int id);
     }
 }

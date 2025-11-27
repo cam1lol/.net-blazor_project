@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using TaskManager.Api.Models;
+using TaskManager.Shared.Models;
 
 namespace TaskManager.Api.Data
 {
@@ -8,13 +8,13 @@ namespace TaskManager.Api.Data
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         public DbSet<User> Users { get; set; }
-        public DbSet<TaskItem> TaskItems { get; set; }
+        public DbSet<UserTask> UserTasks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            // Configuración de la relacion de User = TaskItems
+            // Configuración de la relación User = UserTasks
             modelBuilder.Entity<User>()
                 .HasMany(u => u.Tasks)
                 .WithOne(t => t.User)
@@ -26,9 +26,9 @@ namespace TaskManager.Api.Data
             modelBuilder.Entity<User>().Property(u => u.Email).HasColumnType("TEXT");
             modelBuilder.Entity<User>().Property(u => u.Password).HasColumnType("TEXT");
 
-            modelBuilder.Entity<TaskItem>().Property(t => t.Title).HasColumnType("TEXT");
-            modelBuilder.Entity<TaskItem>().Property(t => t.Description).HasColumnType("TEXT");
-            modelBuilder.Entity<TaskItem>().Property(t => t.CreatedAt).HasColumnType("TEXT");
+            modelBuilder.Entity<UserTask>().Property(t => t.Title).HasColumnType("TEXT");
+            modelBuilder.Entity<UserTask>().Property(t => t.Description).HasColumnType("TEXT");
+            modelBuilder.Entity<UserTask>().Property(t => t.CreatedAt).HasColumnType("TEXT");
         }
     }
 }

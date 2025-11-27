@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using TaskManager.Api.Models;
+using TaskManager.Shared.Models;
 using TaskManager.Api.Services.Interfaces;
 
 namespace TaskManager.Api.Controllers
@@ -55,7 +55,7 @@ namespace TaskManager.Api.Controllers
             try
             {
                 var createdUser = await _userService.CreateAsync(user);
-                return CreatedAtAction(nameof(GetById), new { id = createdUser.Id }, createdUser);
+                return CreatedAtAction(nameof(GetById), new { id = createdUser.UserId }, createdUser);
             }
             catch (Exception ex)
             {
@@ -76,6 +76,7 @@ namespace TaskManager.Api.Controllers
                 existingUser.Name = updatedUser.Name;
                 existingUser.Email = updatedUser.Email;
                 existingUser.Password = updatedUser.Password;
+                existingUser.UpdatedAt = DateTime.Now;
 
                 await _userService.UpdateAsync(id, existingUser);
                 return NoContent();

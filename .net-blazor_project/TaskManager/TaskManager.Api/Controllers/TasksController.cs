@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using TaskManager.Api.Models;
+using TaskManager.Shared.Models;
 using TaskManager.Api.Services.Interfaces;
+using System;
+using System.Threading.Tasks;
 
 namespace TaskManager.Api.Controllers
 {
@@ -40,7 +42,7 @@ namespace TaskManager.Api.Controllers
             {
                 var task = await _taskService.GetByIdAsync(id);
                 if (task == null)
-                    return NotFound(new { Mensaje = $"No se encontro la tarea con ID {id}." });
+                    return NotFound(new { Mensaje = $"No se encontró la tarea con ID {id}." });
 
                 return Ok(task);
             }
@@ -52,7 +54,7 @@ namespace TaskManager.Api.Controllers
 
         // POST: api/tasks
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] TaskItem task)
+        public async Task<IActionResult> Create([FromBody] UserTask task)
         {
             try
             {
@@ -63,7 +65,7 @@ namespace TaskManager.Api.Controllers
 
                 task.CreatedAt = DateTime.UtcNow; // asignar fecha de creación
                 var createdTask = await _taskService.CreateAsync(task);
-                return CreatedAtAction(nameof(GetById), new { id = createdTask.Id }, createdTask);
+                return CreatedAtAction(nameof(GetById), new { id = createdTask.TaskId }, createdTask);
             }
             catch (Exception ex)
             {
@@ -73,19 +75,20 @@ namespace TaskManager.Api.Controllers
 
         // PUT: api/tasks/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] TaskItem updatedTask)
+        public async Task<IActionResult> Update(int id, [FromBody] UserTask updatedTask)
         {
             try
             {
                 var existingTask = await _taskService.GetByIdAsync(id);
                 if (existingTask == null)
-                    return NotFound(new { Mensaje = $"No se encontro la tarea con ID {id}." });
+                    return NotFound(new { Mensaje = $"No se encontró la tarea con ID {id}." });
 
                 // Actualizar campos
                 existingTask.Title = updatedTask.Title;
                 existingTask.Description = updatedTask.Description;
                 existingTask.DueDate = updatedTask.DueDate;
                 existingTask.UserId = updatedTask.UserId;
+                existingTask.Status = updatedTask.Status;
 
                 await _taskService.UpdateAsync(id, existingTask);
                 return NoContent();

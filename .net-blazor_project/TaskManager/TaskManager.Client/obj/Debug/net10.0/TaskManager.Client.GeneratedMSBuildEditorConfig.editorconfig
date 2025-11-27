@@ -32,8 +32,16 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/kmilo/Escritorio/.net_project/.net-blazor_project/TaskManager/TaskManager.Client/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+[D:/kmilo/Escritorio/.net_project/.net-blazor_project/TaskManager/TaskManager.Client/Components/FilterTasks.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGaWx0ZXJUYXNrcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/kmilo/Escritorio/.net_project/.net-blazor_project/TaskManager/TaskManager.Client/Components/TaskForm.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUYXNrRm9ybS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/kmilo/Escritorio/.net_project/.net-blazor_project/TaskManager/TaskManager.Client/Components/Tasklist.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUYXNrbGlzdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/kmilo/Escritorio/.net_project/.net-blazor_project/TaskManager/TaskManager.Client/Pages/Home.razor]
@@ -44,8 +52,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90Rm91bmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/kmilo/Escritorio/.net_project/.net-blazor_project/TaskManager/TaskManager.Client/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2VhdGhlci5yYXpvcg==
+[D:/kmilo/Escritorio/.net_project/.net-blazor_project/TaskManager/TaskManager.Client/Pages/Tasks.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFza3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/kmilo/Escritorio/.net_project/.net-blazor_project/TaskManager/TaskManager.Client/Pages/UserCard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckNhcmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/kmilo/Escritorio/.net_project/.net-blazor_project/TaskManager/TaskManager.Client/Pages/UserList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckxpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/kmilo/Escritorio/.net_project/.net-blazor_project/TaskManager/TaskManager.Client/Pages/Users.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/kmilo/Escritorio/.net_project/.net-blazor_project/TaskManager/TaskManager.Client/_Imports.razor]

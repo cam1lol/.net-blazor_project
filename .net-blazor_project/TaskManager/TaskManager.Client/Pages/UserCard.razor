@@ -1,0 +1,15 @@
+@using UserModel = TaskManager.Shared.Models.User
+@code {
+    [Parameter] public required UserModel User { get; set; }
+    private bool hover = false;
+    private string hoverStyle => hover ? "transform: scale(1.05); transition: transform 0.3s;" 
+                                      : "transform: scale(1); transition: transform 0.3s;";
+}
+
+<div class="card mb-3 shadow-sm user-card" style="@hoverStyle"
+     @onmouseover="() => hover = true" @onmouseout="() => hover = false">
+    <div class="card-body">
+        <h5 class="card-title">@User.Name</h5>
+        <p class="card-text">@User.Email</p>
+    </div>
+</div>

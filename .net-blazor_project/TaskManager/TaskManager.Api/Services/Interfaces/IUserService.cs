@@ -1,4 +1,5 @@
-using TaskManager.Api.Models;
+
+using TaskManager.Shared.Models;
 
 namespace TaskManager.Api.Services.Interfaces
 {

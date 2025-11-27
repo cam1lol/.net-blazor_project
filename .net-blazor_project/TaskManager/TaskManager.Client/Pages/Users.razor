@@ -1,0 +1,23 @@
+@page "/users"
+@using TaskManager.Client.Services
+@using UserModel = TaskManager.Shared.Models.User
+@inject UserService UserService
+
+<h3>Users</h3>
+
+@if (users != null && users.Any())
+{
+    @foreach(var user in users)
+    {
+        <UserCard User="user" />
+    }
+}
+
+@code {
+    private List<UserModel> users = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        users = await UserService.GetUsersAsync();
+    }
+}

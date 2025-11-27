@@ -1,55 +1,69 @@
 using Microsoft.EntityFrameworkCore;
 using TaskManager.Api.Data;
-using TaskManager.Api.Models;
+using TaskManager.Shared.Models;
 using TaskManager.Api.Services.Interfaces;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace TaskManager.Api.Services
 {
     public class TaskService : ITaskService
     {
         private readonly AppDbContext _context;
+
         public TaskService(AppDbContext context)
         {
             _context = context;
         }
 
-        public async Task<IEnumerable<TaskItem>> GetAllAsync()
+        // Obtener todas las tareas con su usuario asociado
+        public async Task<IEnumerable<UserTask>> GetAllAsync()
         {
-            return await _context.TaskItems.Include(t => t.User).ToListAsync();
+            return await _context.UserTasks
+                                 .Include(t => t.User)
+                                 .ToListAsync();
         }
 
-        public async Task<TaskItem> GetByIdAsync(int id)
+        // Obtener una tarea por ID (nullable)
+        public async Task<UserTask?> GetByIdAsync(int id)
         {
-            return await _context.TaskItems.Include(t => t.User).FirstOrDefaultAsync(t => t.Id == id);
+            return await _context.UserTasks
+                                 .Include(t => t.User)
+                                 .FirstOrDefaultAsync(t => t.TaskId == id);
         }
 
-        public async Task<TaskItem> CreateAsync(TaskItem task)
+        // Crear una nueva tarea
+        public async Task<UserTask> CreateAsync(UserTask task)
         {
-            _context.TaskItems.Add(task);
+            _context.UserTasks.Add(task);
             await _context.SaveChangesAsync();
             return task;
         }
 
-        public async Task<TaskItem> UpdateAsync(int id, TaskItem task)
+        // Actualizar una tarea existente
+        public async Task<UserTask?> UpdateAsync(int id, UserTask task)
         {
-            var existingTask = await _context.TaskItems.FindAsync(id);
+            var existingTask = await _context.UserTasks.FindAsync(id);
             if (existingTask == null) return null;
 
             existingTask.Title = task.Title;
             existingTask.Description = task.Description;
             existingTask.UserId = task.UserId;
             existingTask.DueDate = task.DueDate;
+            existingTask.Status = task.Status;
+            existingTask.UpdatedAt = System.DateTime.Now;
 
             await _context.SaveChangesAsync();
             return existingTask;
         }
 
+        // Eliminar una tarea por ID
         public async Task<bool> DeleteAsync(int id)
         {
-            var task = await _context.TaskItems.FindAsync(id);
+            var task = await _context.UserTasks.FindAsync(id);
             if (task == null) return false;
 
-            _context.TaskItems.Remove(task);
+            _context.UserTasks.Remove(task);
             await _context.SaveChangesAsync();
             return true;
         }

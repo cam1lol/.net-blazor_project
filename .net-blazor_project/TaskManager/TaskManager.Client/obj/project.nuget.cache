@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tQ7rrRcgTEI=",
+  "dgSpecHash": "VwJYTTDdu0o=",
   "success": true,
   "projectFilePath": "D:\\kmilo\\Escritorio\\.net_project\\.net-blazor_project\\TaskManager\\TaskManager.Client\\TaskManager.Client.csproj",
   "expectedPackageFiles": [
@@ -8,9 +8,11 @@
     "C:\\Users\\kmilo\\.nuget\\packages\\microsoft.aspnetcore.authorization\\10.0.0\\microsoft.aspnetcore.authorization.10.0.0.nupkg.sha512",
     "C:\\Users\\kmilo\\.nuget\\packages\\microsoft.aspnetcore.components\\10.0.0\\microsoft.aspnetcore.components.10.0.0.nupkg.sha512",
     "C:\\Users\\kmilo\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\10.0.0\\microsoft.aspnetcore.components.analyzers.10.0.0.nupkg.sha512",
+    "C:\\Users\\kmilo\\.nuget\\packages\\microsoft.aspnetcore.components.authorization\\10.0.0\\microsoft.aspnetcore.components.authorization.10.0.0.nupkg.sha512",
     "C:\\Users\\kmilo\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\10.0.0\\microsoft.aspnetcore.components.forms.10.0.0.nupkg.sha512",
     "C:\\Users\\kmilo\\.nuget\\packages\\microsoft.aspnetcore.components.web\\10.0.0\\microsoft.aspnetcore.components.web.10.0.0.nupkg.sha512",
     "C:\\Users\\kmilo\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\10.0.0\\microsoft.aspnetcore.components.webassembly.10.0.0.nupkg.sha512",
+    "C:\\Users\\kmilo\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\10.0.0\\microsoft.aspnetcore.components.webassembly.authentication.10.0.0.nupkg.sha512",
     "C:\\Users\\kmilo\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.devserver\\10.0.0\\microsoft.aspnetcore.components.webassembly.devserver.10.0.0.nupkg.sha512",
     "C:\\Users\\kmilo\\.nuget\\packages\\microsoft.aspnetcore.metadata\\10.0.0\\microsoft.aspnetcore.metadata.10.0.0.nupkg.sha512",
     "C:\\Users\\kmilo\\.nuget\\packages\\microsoft.dotnet.hotreload.webassembly.browser\\10.0.100\\microsoft.dotnet.hotreload.webassembly.browser.10.0.100.nupkg.sha512",

@@ -1,23 +1,19 @@
+using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
-namespace TaskManager.Api.Models
+namespace TaskManager.Shared.Models
 {
     public class User
     {
-        [Key]
-        public int Id { get; set; }
+        public int UserId { get; set; }
 
-        [Required]
         public string Name { get; set; }
-
-        [Required]
         public string Email { get; set; }
+        public string? Password { get; set; }
 
-        [Required]
-        public string Password { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+        public DateTime? UpdatedAt { get; set; }
 
-        // Relación uno a muchos
-        public ICollection<TaskItem> Tasks { get; set; }
+        public ICollection<UserTask> Tasks { get; set; } = new List<UserTask>();
     }
 }

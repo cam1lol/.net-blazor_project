@@ -1,28 +1,38 @@
 using Microsoft.EntityFrameworkCore;
 using TaskManager.Api.Data;
-using TaskManager.Api.Models;
+using TaskManager.Shared.Models;
 using TaskManager.Api.Services.Interfaces;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace TaskManager.Api.Services
 {
     public class UserService : IUserService
     {
         private readonly AppDbContext _context;
+
         public UserService(AppDbContext context)
         {
             _context = context;
         }
 
+        // Obtener todos los usuarios con sus tareas
         public async Task<IEnumerable<User>> GetAllAsync()
         {
-            return await _context.Users.ToListAsync();
+            return await _context.Users
+                                 .Include(u => u.Tasks)
+                                 .ToListAsync();
         }
 
-        public async Task<User> GetByIdAsync(int id)
+        // Obtener un usuario por ID (nullable)
+        public async Task<User?> GetByIdAsync(int id)
         {
-            return await _context.Users.Include(u => u.Tasks).FirstOrDefaultAsync(u => u.Id == id);
+            return await _context.Users
+                                 .Include(u => u.Tasks)
+                                 .FirstOrDefaultAsync(u => u.UserId == id);
         }
 
+        // Crear un nuevo usuario
         public async Task<User> CreateAsync(User user)
         {
             _context.Users.Add(user);
@@ -30,7 +40,8 @@ namespace TaskManager.Api.Services
             return user;
         }
 
-        public async Task<User> UpdateAsync(int id, User user)
+        // Actualizar un usuario existente
+        public async Task<User?> UpdateAsync(int id, User user)
         {
             var existingUser = await _context.Users.FindAsync(id);
             if (existingUser == null) return null;
@@ -38,11 +49,13 @@ namespace TaskManager.Api.Services
             existingUser.Name = user.Name;
             existingUser.Email = user.Email;
             existingUser.Password = user.Password;
+            existingUser.UpdatedAt = System.DateTime.Now;
 
             await _context.SaveChangesAsync();
             return existingUser;
         }
 
+        // Eliminar un usuario por ID
         public async Task<bool> DeleteAsync(int id)
         {
             var user = await _context.Users.FindAsync(id);
